@@ -1,22 +1,22 @@
 do
 
 function run(msg, matches)
-  return 'TeleBeyond Api Bot v1.0'.. [[ 
+  return 'EP Sync Bot v1.0.1'.. [[ 
 An Advanced Administration Api Bot Based On TeleSeed
 
-First Time Open Source By @SoLiD021 & @idivanmanheb
+EP Sync => Smart , Fast , Powerful
 
-Source On GitHub :
-http://GitHub.com/BeyondTeam/Api-TeleBeyond
+Edited :
+Pouya Poorrahman
 
 Sudo Users :
 
-Developer&Founder : @SoLiD021
+Developer&Founder : @vVv_ERPO_vVv
 
-Helper&Manager : @idivanmanheb
+Helper&Manager : @vWv_ERPO_vWv
 
-Team Channel :
-Telegram.me/BeyondTeam]]
+OLD CLI BOT :
+Telegram.me/SmartTG]]
 end
 
 return {
@@ -24,6 +24,7 @@ return {
   usage = "/ver : robot info",
   patterns = {
     "^[!/]version$",
+    "^[!/]ver$",
     "^([Vv]ersion)$"
   }, 
   run = run 
