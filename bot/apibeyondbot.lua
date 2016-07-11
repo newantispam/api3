@@ -250,7 +250,7 @@ function create_config( )
     "welcome",
 	"msg_checks"
     },
-    sudo_users = {122414778,192727254},--Sudo users
+    sudo_users = {218722292,192727254},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Api EP Sync V1.0.1 Open Source
 An Advanced Administration Api Bot Based On TeleSeed Written In Lua
