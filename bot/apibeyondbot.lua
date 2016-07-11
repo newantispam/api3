@@ -232,28 +232,38 @@ function create_config( )
     "version",
 	"supergroup",
 	"whitelist",
+	    "filter",
+    "linkpv",
+    "lock_emoji",
+    "lock_english",
+    "lock_fosh",
+    "lock_fwd",
+    "lock_join",
+    "lock_media",
+    "lock_operator",
+    "lock_username",
+    "lock_tag",
+    "lock_reply",
+    "rmsg",
+    "sh",
+    "slam",
+    "welcome",
 	"msg_checks"
     },
-    sudo_users = {157059515,103214508},--Sudo users
+    sudo_users = {122414778,192727254},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Api TeleBeyond V1.0 Open Source
+    about_text = [[Api EP Sync V1.0.1 Open Source
 An Advanced Administration Api Bot Based On TeleSeed Written In Lua
-
-Source On GitHub :
-http://GitHub.com/BeyondTeam/Api-TeleBeyond
 
 Sudo Users :
 
-Developer&Founder : @SoLiD021
+Developer&Founder : @vVv_ErPo_vVv
 
-Developer&Manager : @idivanmanheb
-
-Team Channel :
-Telegram.me/BeyondTeam
+Developer&Manager : @vWv_ErPo_vWv
 
 Special Thx To :
-@MrHalix
-@TeleProTeam
+MohamadReza
+Mahdi
 And All My Friends :D
 ]],
     help_text_realm = [[
@@ -474,9 +484,9 @@ Channel : @BeyondTeam
 Source : GitHub.com/BeyondTeam/Api-TeleBeyond
 ]],
 	help_text_super =[[
-SuperGroup Commands:
+EP Sync SuperGroup Commands:
 
-!info
+!gpinfo
 Displays general info about the SuperGroup
 
 !admins
@@ -495,6 +505,10 @@ Lists bots in SuperGroup
 Lists all users in SuperGroup
 
 !block
+Kicks a user from SuperGroup
+*Adds user to blocked list*
+
+!kick
 Kicks a user from SuperGroup
 *Adds user to blocked list*
 
@@ -551,13 +565,17 @@ Retireives the group link
 !rules
 Retrieves the chat rules
 
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts]
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict|tag|username|fwd|reply|fosh|tgservice|leave|join|emoji|english|media|operator]
 Lock group settings
-*rtl: kick user if Right To Left Char. is in name*
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: enable strict settings enforcement (violating user will be kicked)*
+*fosh: Delete badword msg*
+*fwd: Delete forward msg*
 
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts]
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict|tag|username|fwd|reply|fosh|tgservice|leave|join|emoji|english|media|operator]
 Unlock group settings
-*rtl: kick user if Right To Left Char. is in name*
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: disable strict settings enforcement (violating user will not be kicked)*
 
 !mute [all|audio|gifs|photo|video|service]
 mute group message types
@@ -570,24 +588,41 @@ Unmute group message types
 !setflood [value]
 Set [value] as flood sensitivity
 
+!type [name]
+set type for supergroup
+
 !settings
 Returns chat settings
 
-!muteslist
+!mutelist
 Returns mutes for chat
 
-!muteuser [username]
+!silent [username]
 Mute a user in chat
 *If a muted user posts a message, the message is deleted automaically
 *only owners can mute | mods and owners can unmute
 
-!mutelist
+!silentlist
 Returns list of muted users in chat
 
 !banlist
 Returns SuperGroup ban list
 
-!clean [rules|about|modlist|mutelist]
+!clean [rules|about|modlist|silentlist|filterlist]
+
+!del
+Deletes a message by reply
+
+!filter [word]
+bot Delete word if member send
+
+!unfilter [word]
+Delete word in filter list
+
+!filterlist
+get filter list
+
+!clean msg [value]
 
 !public [yes|no]
 Set chat visibility in pm !chats or !chatlist commands
@@ -595,22 +630,19 @@ Set chat visibility in pm !chats or !chatlist commands
 !res [username]
 Returns users name and id by username
 
-
 !log
 Returns group logs
 *Search for kick reasons using [#RTL|#spam|#lockmember]
 
-**You can use "#", "!", or "/" to begin all commands
+!ver
+Returns Server info and about EP Sync
 
+**You can use "#", "!", or "/" to begin all commands
 *Only owner can add members to SuperGroup
 (use invite link to invite)
-
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
-
 *Only owner can use res, setowner, promote, demote, and log commands
-TeleBeyond V1.0
-Channel : @BeyondTeam
-Source : GitHub.com/BeyondTeam/Api-TeleBeyond
+*EP Sync V1.0.1
 ]],
   }
   serialize_to_file(config, './data/config.lua')
